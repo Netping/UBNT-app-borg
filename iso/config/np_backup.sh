@@ -85,7 +85,7 @@ case "$1" in
         /etc/zabbix/                            \
         /usr/share/zabbix/modules/              \
         /backup/tmp/zbxconf.sql
-
+	$BORG prune --keep-last 60 -P zabbix* /backup/NetPing
         exit $?
         ;;
   "database")
@@ -113,7 +113,7 @@ case "$1" in
         --exclude-caches                        \
         $PATH'::network-{now:%Y-%m-%d_%H:%M:%S}' \
         /etc/netplan/
-
+	$BORG prune --keep-last 60 -P network* /backup/NetPing
         exit $?
         ;;
   "users")
@@ -129,7 +129,7 @@ case "$1" in
         /etc/gshadow                            \
         /etc/passwd                             \
         /etc/group
-
+	$BORG prune --keep-last 60 -P users* /backup/NetPing
         exit $?
         ;;
   *)
