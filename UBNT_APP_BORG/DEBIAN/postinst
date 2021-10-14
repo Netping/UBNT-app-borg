@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if ls /backup/ | grep NetPing; then echo "@reboot bash /etc/np_scripts/rest.sh" > /var/spool/cron/crontabs/root && chown root:crontab /var/spool/cron/crontabs/root && chmod 600 /var/spool/cron/crontabs/root && update-grub; else cp /etc/np_scripts/root /var/spool/cron/crontabs/ && chown root:crontab /var/spool/cron/crontabs/root && chmod 600 /var/spool/cron/crontabs/root && update-grub; fi
+
+exit 0

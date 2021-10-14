@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm /var/spool/cron/crontabs/root && mv /etc/default/grub.bak /etc/default/grub && update-grub
+
+exit 0
