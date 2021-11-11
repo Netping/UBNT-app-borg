@@ -4,7 +4,7 @@ major=0
 minor=0
 path=1
 apt-get install dpkg debconf debhelper lintian
-cat <<EOF > ./UBNT-APP-BORG/DEBIAN/control
+cat <<EOF > ./UBNT_APP_BORG/DEBIAN/control
 Package: ubnt-app-borg
 Version: $major.$minor-$path
 Maintainer: vv.lisyak@gmail.com
@@ -15,5 +15,5 @@ Description: NetPing
  Try nomber one.
 EOF
 fakeroot dpkg-deb --build UBNT*
-mv ./UBNT-APP-BORG.deb UBNT-APP-BORG_$major.$minor-$path.deb
+mv ./UBNT_APP_BORG.deb UBNT-APP-BORG_$major.$minor-$path.deb
 exit 0
