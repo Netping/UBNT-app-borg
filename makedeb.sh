@@ -15,5 +15,5 @@ Description: NetPing
  Try nomber one.
 EOF
 fakeroot dpkg-deb --build UBNT*
-mv ./UBNT_APP_BORG.deb UBNT-APP-BORG_$major.$minor-$path.deb
+#mv ./UBNT_APP_BORG.deb UBNT-APP-BORG_$major.$minor-$path.deb
 exit 0
