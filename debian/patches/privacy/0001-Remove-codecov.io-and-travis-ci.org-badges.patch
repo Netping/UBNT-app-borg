@@ -1,0 +1,29 @@
+From: Danny Edel <mail@danny-edel.de>
+Date: Mon, 31 Aug 2015 13:05:21 +0200
+Subject: Remove online build services' badges
+
+Lintian Tag: privacy-breach-generic
+
+Reading the html docs would automatically open connections to their
+servers in order to show the build status. While this may be of interest
+when loading the github page, it's not relevant for the end-user reading
+the docs.
+
+Also, remove the link to the online docs of the 'stable' version, since
+they could be out of sync with the Debian version.
+---
+ README.rst | 1 --
+ 1 file changed, 1 deletion
+
+diff --git a/README.rst b/README.rst
+index 2600cf22..bca41b27 100644
+--- a/README.rst
++++ b/README.rst
+@@ -171,7 +171,6 @@ see ``docs/support.rst`` in the source distribution).
+ 
+ .. start-badges
+ 
+-|doc| |build| |coverage| |bestpractices|
+ 
+ .. |doc| image:: https://readthedocs.org/projects/borgbackup/badge/?version=stable
+         :alt: Documentation

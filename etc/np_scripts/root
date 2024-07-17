@@ -1,0 +1,6 @@
+*/2 * * * * /usr/share/doc/ubnt-zabbix-template/postinst.sh
+15 23 * * * bash /backup/np_backup.sh create users  
+30 23 * * * bash /backup/np_backup.sh create network
+45 23 * * * bash /backup/np_backup.sh create zabbix
+@reboot bash /etc/np_scripts/com_hb.sh
+@reboot bash /etc/NetworkManager/configure.sh

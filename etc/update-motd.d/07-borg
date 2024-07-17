@@ -1,0 +1,5 @@
+#!/bin/sh
+
+printf " Borg release: 1.2.7 \n"
+#printf "\n"
+

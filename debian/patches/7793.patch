@@ -1,0 +1,19 @@
+From 72b7a40742e503b2a0bdc21cc4e4d645cdeb9880 Mon Sep 17 00:00:00 2001
+From: Gianfranco Costamagna <costamagnagianfranco@yahoo.it>
+Date: Thu, 31 Aug 2023 08:04:13 +0200
+Subject: [PATCH] Help borgbackup copy attic.tar.gz during test run
+
+---
+ MANIFEST.in | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/MANIFEST.in b/MANIFEST.in
+index caf027ad90..d0989dcfca 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -6,3 +6,5 @@ prune .github
+ include src/borg/platform/darwin.c src/borg/platform/freebsd.c src/borg/platform/linux.c src/borg/platform/posix.c
+ include src/borg/platform/syncfilerange.c
+ include src/borg/platform/windows.c
++include src/borg/testsuite/attic.tar.gz
++include src/borg/paperkey.html
